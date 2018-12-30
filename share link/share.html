@@ -1,0 +1,32 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div align="center">
+     <br><br><br><br><br><br><br>
+    <button class="button" onclick="ok()" style="width:auto;">SHARE LINK</button>
+      <div id="id01" class="fmodal">
+        <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+		<a href="https://www.twitter.com" class="fa fa-twitter"></a>
+		<a href="https://www.google.com" class="fa fa-google"></a>
+		<a href="https://www.youtube.com" class="fa fa-youtube"></a>
+     </div>
+</div>
+<script type="text/javascript">
+	bl=document.getElementById('id01').style.display='block';
+	no=document.getElementById('id01').style.display='none';
+	function ok()
+	{
+		if(document.getElementById('id01').style.display==bl)
+		{
+			document.getElementById('id01').style.display='none';
+		}
+		else{
+			document.getElementById('id01').style.display='block';
+		}
+	}
+</script>
+</html>

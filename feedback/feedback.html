@@ -1,0 +1,129 @@
+<html>
+<head>
+  <style type="text/css">
+    html {
+  background: #2F3238;
+}
+
+.feedback-button {
+  height: 40px;
+  border: solid 3px white;
+  background: #333;
+  width: 100px;
+  line-height: 32px;
+  transform: rotate(-90deg);
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  position: fixed;
+  right: -40px;
+  top: 45%;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  z-index: 999;
+}
+
+#feedback-main {
+  display: none;
+  float: left;
+  padding-top: 0px;
+}
+
+#feedback-div {
+  background-color: white;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  width: 450px;
+  float: left;
+  left: 50%;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -260px;
+  border-radius: 7px;
+}
+
+.feedback-input {
+  color: #3c3c3c;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 7px;
+  line-height: 22px;
+  background-color: #fbfbfb;
+  padding: 13px 13px 13px ;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 3px solid black;
+}
+    
+.feedback-input:focus {
+  background: #fdf;
+  box-shadow: 0;
+  border: 1px solid black;
+  color: #3498db;
+  outline: none;
+  padding: 13px 13px 13px;
+}
+#feedback-button-blue {
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  float: left;
+  width: 100%;
+  border: #fbfbfb solid 1px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: -4px;
+  font-weight: 400;
+  border-radius: 7px;
+}
+.feedback-button-blue:hover {
+  color: #3498db;
+}
+
+.feedback-ease {
+  width: 0px;
+  height: 74px;
+  background-color: #fbfbfb;
+  transition: .3s ease;
+}
+
+.feedback-submit:hover .feedback-ease {
+  width: 100%;
+  background-color: white;
+}
+</style>
+</head>
+<body>
+<div id="feedback-main">
+  <div id="feedback-div">
+    <p class="name">
+        <input name="name" type="name" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="Name" id="feedback-name" />
+      </p>
+
+      <p class="email">
+        <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="feedback-email" placeholder="Email" required />
+      </p>
+
+      <div class="feedback-submit">
+        <input type="submit" value="SEND" id="feedback-button-blue" />
+        <div class="feedback-ease"></div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+    function toggle_visibility() {
+       var e = document.getElementById('feedback-main');
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+</script>
+<button id="popup" class="feedback-button" onclick="toggle_visibility()">Feedback</button>
